@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.production-logos-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.production-logo-item {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+}
+
+.production-logo-img {
+    width: 100%;
+    height: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    object-fit: contain;
+}
+
+.nav-area {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-area .nav-bar {
+    display: flex;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 25px;
+    background-color: white;
+    border: 1px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.nav-item::after {
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: #01b4e4;
+    display: block;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.select-area select {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.page-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-area button {
+    margin: 10px 150px;
+    color: #01b4e4;
+    background-color: white;
+    border: 1px solid #01b4e4;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.movie-card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.movie-title:hover {
+    cursor: pointer;
+    color: dimgrey;
+}
+
+.movie-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-rating-area {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ion-star {
+    margin-right: 10px;
+    color: #f5c518;
+}
+
+.ion-ios-heart,
+.ion-ios-heart-outline {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.ion-ios-heart {
+    color: red;
+}
+
+.movie-details-container {
+    display: none;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.movie-details-close-icon {
+    padding: 5px;
+}
+
+.movie-details-close-icon:hover {
+    cursor: pointer;
+}
+
+.movie-details-card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    color: dimgray;
+    overflow: scroll;
+    padding: 1em;
+}
+
+.movie-details-header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.movie-details-close-icon {
+    font-size: 1.5em;
+}
+
+.movie-details-img {
+    width: 100%;
+}
+
+.movie-details-description-area {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-description-subtitle {
+    margin: 0.5em 0;
+}
+
+.genres-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre-item {
+    height: 30px;
+    margin: 5px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #90cea1;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 800px) {
+    .movie-card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .movie-card {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+    .movie-details-container {
+        width: 60%;
+        height: 80%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        display: none;
+    }
+    .movie-details-card {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 10px;
+        color: dimgray;
+        overflow: scroll;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+    }
+    .movie-details-img {
+        width: 50%;
+        margin: 1em;
+    }
+    .movie-details-description-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
